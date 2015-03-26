@@ -20,7 +20,7 @@ scf(1);
 plot2d(t,csim('step',t,g),3);   //step responce of plant
 plot2d(t,csim('step',t,h),6);   //step responce of plant + controller
 
-for i= 1:15
+for i= 1:25
     c = syslin('c', (kp + (ti/kp)/s)+ (du*i/kp)*s);
     h = g*c/(1+g*c);
     plot2d(t,csim('step',t,h),7+i);  
